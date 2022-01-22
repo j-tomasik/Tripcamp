@@ -36,10 +36,13 @@ class SessionForm extends React.Component {
 
 
     render() {
+
+        //add const for turinary that will add for labels/inputs for 'sign up' form
+        
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome back to BenchBnB!
+                    Welcome to BenchBnB!
                     <br />
                     Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
