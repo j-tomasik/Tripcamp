@@ -1,0 +1,31 @@
+#errors {
+    color: red
+}
+
+.login-form-container {
+    border: 2px solid black;
+    display: flex;
+
+    // align-items: center;
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    line-height: 1.6;
+    color: rgb(40, 64, 12);
+}
+
+.header-link {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.6;
+    color: rgb(40, 64, 12);
+}
+
+.login-signup {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.6;
+    color: rgb(40, 64, 12);
+}
