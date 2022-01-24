@@ -13,6 +13,10 @@
     "postinstall": "webpack",
     "webpack": "webpack --watch --mode=development"
   },
+  "engines": {
+    "node": "14.16.1",
+    "npm": "7.11.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/j-tomasik/tripcamp.git"
