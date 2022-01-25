@@ -6,9 +6,9 @@ import SessionForm from './session_form';
 
 const mapStateToProps = ({ errors }) => {
     return {
-        errors: errors,
+        errors: errors.session,
         formType: 'login',
-        navLink: <Link to="/signup">Don't have a Tripcamp account? Sign up!</Link>,
+        navLink: <Link to="/signup">Click here to Sign up!</Link>,
     };
 };
 

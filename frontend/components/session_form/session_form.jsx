@@ -10,7 +10,8 @@ class SessionForm extends React.Component {
             firstname: '',
             lastname: '',
             zip: '',
-            errors: []
+            errors: [],
+            demo: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -24,18 +25,30 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
+        this.props.processForm(user).fail(() => this.setState({errors: this.props.errors}))
+    }
+
+    signInDemo() {
+        const demoObj = {
+            email: 'demo@starting.com',
+            password: 'demo-user'
+        }
+        const user = Object.assign({}, this.state, demoObj)
         this.props.processForm(user)
-        .fail(() => this.setState({errors: this.props.errors}))
+        this.state.demo = true;
     }
 
     renderErrors() {
         return (
             <ul id="errors">
-                {this.props.errors.session.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
+                {this.state.demo === false ?                    
+                        this.state.errors.map((error, i) => (
+                            <li key={`error-${i}`}>
+                                {error}
+                            </li>
+                        ))
+                    
+                    : <p></p>}               
             </ul>
         );
     }
@@ -43,10 +56,14 @@ class SessionForm extends React.Component {
 
     render() {
 
-        //add const for turinary that will add for labels/inputs for 'sign up' form
+        
         const otherFields = this.props.formType === 'signup' ?
         <div>
-                <label>First Name:
+            <div>
+                <h1>Join TripCamp</h1>
+                <p>and discover the best trip spots!</p>
+            </div>
+                <label><b>First Name:</b>
                     <input type="text"
                         value={this.state.firstname}
                         onChange={this.update('firstname')}
@@ -54,7 +71,7 @@ class SessionForm extends React.Component {
                     />
                 </label>
                 <br />
-                <label>Last Name:
+                <label><b>Last Name:</b>
                     <input type="text"
                         value={this.state.lastname}
                         onChange={this.update('lastname')}
@@ -62,7 +79,7 @@ class SessionForm extends React.Component {
                     />
                 </label>
                 <br />
-                <label>Zip Code:
+                <label><b>Zip Code:</b>
                     <input type="number"
                         value={this.state.zip}
                         onChange={this.update('zip')}
@@ -71,21 +88,26 @@ class SessionForm extends React.Component {
                 </label>
         </div>
         :
-        <div>
+        <div className='login--conditional-render'>
+            <h1>Welcome back!</h1>
 
+            <div id='demo-user'>
+                <button type='submit' onClick={() => this.signInDemo()}>Demo User</button>
+            </div>
         </div>
 
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Let's get you outside.
+                    <h1>Let's get you outside.</h1>
                     <br />
                     Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
                     {otherFields}
                     <div className="login-form">
+                        
+                        <label><b>Email:</b>
                         <br />
-                        <label>Email:
                             <input type="email"
                                 value={this.state.email}
                                 onChange={this.update('email')}
@@ -93,7 +115,7 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <label>Password:
+                        <label><b>Password:</b>
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
@@ -104,6 +126,8 @@ class SessionForm extends React.Component {
                         
                         <input className="session-submit" type="submit" value={this.props.formType} />
                     </div>
+
+                    
                 </form>
             </div>
         );
