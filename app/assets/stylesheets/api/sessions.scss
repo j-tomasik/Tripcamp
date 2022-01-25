@@ -1,3 +1,76 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$button: #41D9AC;
+.login-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#errors {
+    color: red
+}
+
+.login-form-container {
+    display: flex;
+    justify-content: center;
+    
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    line-height: 1.6;
+    color: rgb(40, 64, 12);
+    // background-color: rgb(171, 172, 128);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.login-signup {
+    display: flex;
+    // padding: 10px;
+    // margin: 10px;
+    line-height: 1.6;
+    color: rgb(40, 64, 12);
+    background-color: white;
+}
+
+.login-input {
+    width: 100%;
+}
+
+.session-submit {
+    width: 105%;
+    background-color: $button;
+    height: 3.4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+
+}
+
+.session-submit:hover {
+    box-shadow: 1px 1px 5px #777777;
+    cursor: pointer;
+}
+
+.session-submit:active {
+    box-shadow: 1px 1px 5px #777777 inset;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(44, 143, 41);
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

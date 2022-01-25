@@ -1,3 +1,25 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.nav-bar-splash {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.header-link {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.6;
+    color: rgb(40, 64, 12);
+}
+
+
+.nav-right {
+    padding: 10px;
+    margin: 5px;
+    line-height: 1.6;
+}
