@@ -16,9 +16,12 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
     <div>
 
-        
-        <NavBar />
+        <div class="back">
 
+        </div>
+        <NavBar />
+        {/* <h1>Find yourself outside.</h1>
+        <p>Discover and book tent camping, RV parks, cabins, treehouses, and glamping</p> */}
             {/* <navbar className="nav-bar splash">
                 <div className='left-nav'>
                     <Link to="/" className="header-link" replace>

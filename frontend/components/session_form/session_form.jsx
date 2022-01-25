@@ -53,17 +53,32 @@ class SessionForm extends React.Component {
         );
     }
 
+    
+
 
     render() {
+
+        const formHeader = this.props.formType === 'signup' ?
+        <div>
+            <h2 className='login-text'>Join Hipcamp
+            <br />
+            <small>Discover the best camping spots</small>
+            </h2>
+            <br />
+        </div>
+        :
+        <div>
+            <h2 className='login-text'>Welcome Back!
+            <br />
+            <small>Let's get you outside.</small>
+            </h2>     
+        </div>
+
 
         
         const otherFields = this.props.formType === 'signup' ?
         <div>
-            <div>
-                <h1>Join TripCamp</h1>
-                <p>and discover the best trip spots!</p>
-            </div>
-                <label><b>First Name:</b>
+                <label>
                     <input type="text"
                         placeholder='First name'
                         value={this.state.firstname}
@@ -72,7 +87,7 @@ class SessionForm extends React.Component {
                     />
                 </label>
                 <br />
-                <label><b>Last Name:</b>
+                <label>
                     <input type="text"
                         placeholder='Last name'
                         value={this.state.lastname}
@@ -81,7 +96,7 @@ class SessionForm extends React.Component {
                     />
                 </label>
                 <br />
-                <label><b>Zip Code:</b>
+                <label>
                     <input type="number"
                         placeholder='Zip code'
                         value={this.state.zip}
@@ -92,7 +107,6 @@ class SessionForm extends React.Component {
         </div>
         :
         <div className='login--conditional-render'>
-            <h1>Welcome back!</h1>
 
             <div id='demo-user'>
                 <button className="session-submit" type='submit' onClick={() => this.signInDemo()}>Demo User</button>
@@ -102,15 +116,12 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h1>Let's get you outside.</h1>
-                    <br />
-                    Please {this.props.formType} or {this.props.navLink}
+                    {formHeader}                
                     {this.renderErrors()}
                     {otherFields}
                     <div className="login-form">
                         
-                        <label><b>Email:</b>
-                        <br />
+                        <label>
                             <input type="email"
                                 placeholder='Email address'
                                 value={this.state.email}
@@ -118,8 +129,7 @@ class SessionForm extends React.Component {
                                 className="login-input"
                             />
                         </label>
-                        <br />
-                        <label><b>Password:</b>
+                        <label>
                             <input type="password"
                                 placeholder='Password'
                                 value={this.state.password}
@@ -127,9 +137,8 @@ class SessionForm extends React.Component {
                                 className="login-input"
                             />
                         </label>
-                        <br />
-                        
                         <input className="session-submit" type="submit" value={this.props.formType} />
+                        Please {this.props.formType} or <b>{this.props.navLink}</b>
                     </div>
 
                     

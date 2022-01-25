@@ -15,15 +15,15 @@ class Greeting extends React.Component {
 
         const sessionLinks = () => (
             <nav className="login-signup">
-                <Link to="/login">Log in!</Link>
+                <b><Link to="/login">Log in</Link></b>
                 &nbsp;or&nbsp;
-                <Link to="/signup">Sign up!</Link>
+                <b><Link to="/signup">Sign up</Link></b>
             </nav>
         );
         const personalGreeting = () => (
             <hgroup className="header-group">
                 <h2 className="header-name">Hi, {currentUser.firstname}!</h2>
-                <button className="header-button" onClick={logout}>Log Out</button>
+                <button className="session-submit" onClick={logout}>Log Out</button>
             </hgroup>
         );
     
