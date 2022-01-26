@@ -2,11 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+$button: #41D9AC;
 .nav-bar-splash {
     display: flex;
     justify-content: space-between;
     width: 100vw;
+    height: 50px;
 }
 
 .header-link {
@@ -17,9 +18,35 @@
     color: #131212;
 }
 
+.header-name {
+    width: 50%;
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+.header-group {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 .nav-right {
-    padding: 10px;
+    // padding: 10px;
     margin: 5px;
     line-height: 1.6;
+}
+
+.logout-submit {
+    width: 50%;
+    background-color: $button;
+    height: 100%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
 }

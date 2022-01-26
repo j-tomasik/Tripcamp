@@ -23,7 +23,7 @@ class Greeting extends React.Component {
         const personalGreeting = () => (
             <hgroup className="header-group">
                 <h2 className="header-name">Hi, {currentUser.firstname}!</h2>
-                <button className="session-submit" onClick={logout}>Log Out</button>
+                <button className="logout-submit" onClick={logout}>Log Out</button>
             </hgroup>
         );
     
