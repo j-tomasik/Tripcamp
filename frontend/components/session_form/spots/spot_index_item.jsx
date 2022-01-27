@@ -21,16 +21,18 @@ class IndexItem extends React.Component {
                 className='spot-index-item'
                 onClick={this.handleClick}
             >
-                <span className='index-item-category'>Rating:</span>
-                <span className='index-item-copy'>
-                    {'no reviews yet'}
-                </span>
-                <span className='index-item-category'>Name:</span>
-                <span className='index-item-copy'>{name}</span>
-                <span className='index-item-category'>Description:</span>
-                <span className='index-item-copy'>{description}</span>
 
-                <img src={photoUrl}/>
+                <div className='frame'>
+                        <img src={photoUrl} />
+                    <div className='figure-caption'>
+                            <span className='index-item-category'>Name: </span>
+                            <span className='index-item-copy'>{name}</span>
+                            <br />
+                            <span className='index-item-category'>Description: </span>
+                            <span className='index-item-copy'>{description}</span>
+                    </div>
+
+                </div>
 
             </div>
         );

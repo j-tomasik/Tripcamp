@@ -1,0 +1,33 @@
+.spot-index {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 20px;
+    font-family: "Calibre", Helvetica, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    vertical-align: baseline;
+    color: #333333;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.spot-index-item {
+    width: 25%;
+    padding: 0px 10px;
+}
+
+.spot-index-item img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.frame {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(14, 13, 13, 0.1);
+}
+
+
