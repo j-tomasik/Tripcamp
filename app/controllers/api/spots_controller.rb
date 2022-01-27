@@ -6,7 +6,7 @@ class Api::SpotsController < ApplicationController
     end
 
     def index 
-        spots = Spot.all 
+        @spots = Spot.all 
 
         render :index 
     end

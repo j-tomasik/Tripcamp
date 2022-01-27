@@ -8,7 +8,6 @@ Spot.destroy_all
 
 
 demoUser = User.create({firstname: 'demo-user', lastname:'user-demo', zip: 94707, email: 'demo@starting.com', password: 'demo-user'})
-demoSpot = Spot.create({name: 'sf', description: 'foggy', lat: 50, lng: 50})
 
 spot01 = Spot.create({name: 'Piodao, Portugal', description: 'Located in the Serra de Estrela region of Portugal, which is the highest location in the country', lat: 40.22978, lng: 7.82472})
 spot01.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/Piodao_serra_da_estrela.jpeg"), filename: 'piodao.jpeg')

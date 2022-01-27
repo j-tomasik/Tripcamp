@@ -9,6 +9,7 @@ const spotsReducer = (oldstate = {}, action) => {
         default:
             return oldstate;
     }
+
 }
 
 export default spotsReducer;

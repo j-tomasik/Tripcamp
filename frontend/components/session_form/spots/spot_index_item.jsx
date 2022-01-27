@@ -14,7 +14,7 @@ class IndexItem extends React.Component {
     }
 
     render() {
-        const { name, description, picture_url } = this.props.spot;
+        const { name, description, photoUrl } = this.props.spot;
 
         return(
             <div
@@ -30,7 +30,7 @@ class IndexItem extends React.Component {
                 <span className='index-item-category'>Description:</span>
                 <span className='index-item-copy'>{description}</span>
 
-                <img src={picture_url}/>
+                <img src={photoUrl}/>
 
             </div>
         );
