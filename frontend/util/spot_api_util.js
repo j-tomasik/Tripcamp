@@ -6,3 +6,10 @@ export const fetchSpots = () => {
         error: (err) => console.log(err)
     })
 }
+
+export const fetchSpot = spotId => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/spots/${spotId}`
+    })
+}

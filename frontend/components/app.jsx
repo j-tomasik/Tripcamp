@@ -12,11 +12,12 @@ import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import SpotIndexContainer from './session_form/spots/spot_index_container';
+import SpotShowContainer from './spotShow/spot_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { fetchSpots } from '../actions/spot_actions';
 
 const App = () => (
-    <div>
+    <div className='parent'>
 
         <div className="back">
             
@@ -27,6 +28,7 @@ const App = () => (
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+            <Route exact path="/spots/:spotId" component={SpotShowContainer} />
             <Route exact path='/' component={SpotIndexContainer} />
             {/* <ProtectedRoute exact path="/spots/new" component={SpotFormContainer} /> */}
             {/* <Route path="/spots/:spotId" component={SpotShowContainer} /> */}

@@ -8,7 +8,15 @@ export const receiveSpots = spots => {
     spots,
     })
 };
+export const receiveSpot =(spot) => ({
+    type: RECEIVE_SPOT,
+    spot
+})
 
 export const fetchSpots = () => dispatch => (
     APIUtil.fetchSpots().then(spots => dispatch(receiveSpots(spots)))
+)
+
+export const fetchSpot = (spotId) => dispatch => (
+    APIUtil.fetchSpot(spotId).then(spot => dispatch(receiveSpot(spot)))
 )
