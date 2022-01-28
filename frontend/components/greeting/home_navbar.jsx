@@ -17,6 +17,8 @@ class NavBar extends React.Component {
                 </div>
 
                 <div className='nav-right'>
+                    <a href="https://github.com/j-tomasik" className='header-link' target="_blank"><b>GitHub</b></a>
+                    <a href="https://www.linkedin.com/in/jack-tomasik-530ab816b/" className='header-link' target="_blank"><b>LinkedIn</b></a>
                     <GreetingContainer />
                 </div>
                 

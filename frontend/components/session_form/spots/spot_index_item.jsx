@@ -29,11 +29,10 @@ class IndexItem extends React.Component {
                     <div className='frame'>
                             <img src={photoUrl} />
                         <div className='figure-caption'>
-                                <span className='index-item-category'>Name: </span>
-                                <span className='index-item-copy'>{name}</span>
+
+                            <div className='index-item-copy'><b>{name}</b></div>
                                 <br />
-                                <span className='index-item-category'>Description: </span>
-                                <span className='index-item-copy'>{description}</span>
+                                <div className='index-item-description'>{description}</div>
                         </div>
 
                     </div>

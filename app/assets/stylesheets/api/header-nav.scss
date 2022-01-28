@@ -8,6 +8,10 @@ $button: #41D9AC;
     justify-content: space-between;
     width: 100vw;
     height: 50px;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    background: #f3f2ef;
 }
 
 .header-link {
@@ -37,6 +41,14 @@ $button: #41D9AC;
     // padding: 10px;
     margin: 5px;
     line-height: 1.6;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-link {
+    margin-right: 30px;
+    margin-top: 7.5px;
+    padding-top: 0;
 }
 
 .logout-submit {

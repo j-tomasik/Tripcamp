@@ -19,9 +19,10 @@ import { fetchSpots } from '../actions/spot_actions';
 const App = () => (
     <div className='parent'>
 
-        <div className="back">
-            
-        </div>
+        {/* <div className="back">
+        
+        </div> */}
+        
         <NavBar />
         
 
