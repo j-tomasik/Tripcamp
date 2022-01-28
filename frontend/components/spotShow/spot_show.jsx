@@ -20,24 +20,103 @@ class SpotShow extends React.Component {
         // const spots = {
         // [spotId]: spot
         // };
-            console.log('I am here now')
+            
         return (
             <div className='spot-show'>
-                <div className='photos'>
-                    <img className='index-image' src={spot.photoUrl} />
-                </div>
+                    <div className='photos'>
+                        <img className='index-image' src={spot.photoUrl} />
+                    </div>
 
                 <div className='make-room'>
+
+                    <div className='booking-form'>
+                        
+                        <div className='price-per-night'>
+                            <div className='price'>$150</div>
+                            <div className='per-night'>per night</div>
+                        </div>
+
+                        <div className='form-field'>
+                            <div className='checkin'>
+                                <div className='label'>Check in</div>
+                                <div className='DayPickerInput'>
+                                    <input placeholder='Select date' />
+                                </div>
+                            </div>
+
+
+                            <div className='checkout'>
+                                <div className='label'>Check out</div>
+                                <div className='DayPickerInput'>
+                                    <input placeholder='Select date' />
+                                </div>
+                            </div>
+
+
+                            <div className='guests'>
+                                <div className='label'>Guests</div>
+                                <div className='book-guests'>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div className='btn-container'>
+                            <button>Instant Book</button>
+                        </div>
+
+
+                    </div>
+
+
                     <div className='spot-show-body'>
                         <section className='header-container'>
                             <p className='country-location'></p>
                             <h1 className='name'>{spot.name}</h1>
                             <div className='rating'>Reccomended</div>
-                            <div className='host'><b>Hosted by</b></div>
+                            <div className='host-description'><b>Hosted by Jack</b></div>
                             <div className='description'>{spot.description}</div>
 
                         </section>
+
+                        <section className='features'>
+                            <div className='spacing'>
+                                <div className='area'>
+                                    <h2>Lodging provided</h2>
+                                </div>
+                            </div>
+
+                            <div className='spacing'>
+                                <div className='essential'>
+                                    <h2>Lodging provided</h2>
+                                </div>
+                            </div>
+
+                            <div className='spacing'>
+                                <div className='amenity'>
+                                    <h2>Amenities</h2>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <section className='details'>
+                            <h2 className='details'>Details</h2>
+                            <div className='content'>
+
+                            </div>
+                        </section>
+
+                        <section className='activities'>
+                            <h2 className='activities'>Activities</h2>
+                            <p>Offered on the Host's property or nearby</p>
+                        </section>
                     </div>
+                
+
+                    
+
+                    
                 </div>
 
             </div>
