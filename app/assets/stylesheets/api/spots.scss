@@ -5,6 +5,12 @@
     height: 480px;
     object-fit: cover;
     display: block;
+    z-index: 20;
+    // padding: 15px;
+}
+
+.spot-show-body {
+    margin: 15px;
 }
 
 // body {

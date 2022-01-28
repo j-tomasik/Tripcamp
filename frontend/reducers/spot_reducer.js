@@ -1,17 +1,17 @@
 import { RECEIVE_SPOTS } from "../actions/spot_actions";
 import { RECEIVE_SPOT } from "../actions/spot_actions";
 
-const spotsReducer = (oldstate = {}, action) => {
-    Object.freeze(oldstate);
+const spotsReducer = (oldState = {}, action) => {
+    Object.freeze(oldState);
     
     switch (action.type) {
         case RECEIVE_SPOTS:
             return action.spots;
         case RECEIVE_SPOT:
-            const newSpot = {[action.spot.id]: action.bench };
-            return Object.assign({}, state, newSpot)
+            const newSpot = {[action.spot.id]: action.spot };
+            return Object.assign({}, oldState, newSpot)
         default:
-            return oldstate;
+            return oldState;
     }
 
 }
