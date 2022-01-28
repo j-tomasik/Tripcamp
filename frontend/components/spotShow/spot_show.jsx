@@ -16,6 +16,10 @@ class SpotShow extends React.Component {
             console.log('null');
         return null}
         const { spot, spotId, fetchSpot } = this.props
+
+        const nameArr = spot.name.split(',');
+        const spotName = nameArr[0];
+        const spotCountry = nameArr[1];
     
         // const spots = {
         // [spotId]: spot
@@ -71,8 +75,8 @@ class SpotShow extends React.Component {
 
                     <div className='spot-show-body'>
                         <section className='header-container'>
-                            <p className='country-location'></p>
-                            <h1 className='name'>{spot.name}</h1>
+                            <p className='country-location'>{spotCountry}</p>
+                            <h1 className='name'>{spotName}</h1>
                             <div className='rating'>Reccomended</div>
                             <div className='host-description'><b>Hosted by Jack</b></div>
                             <div className='description'>{spot.description}</div>

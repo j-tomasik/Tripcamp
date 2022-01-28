@@ -51,10 +51,10 @@ spot13.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/pa
 spot14 = Spot.create({name: 'Phuket, Thailand', description: 'A gem of an island covered in sandy beaches bosts amazing weather and food', lat: 7.92383, lng: 98.35468})
 spot14.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/phuket_thailand.jpg"), filename: 'phuket.jpg')
 
-spot15 = Spot.create({name: 'Pont du Galetas', description: 'Located in the south east of france, this hidden gem offers great cliff jumping', lat: 43.79740, lng: 6.23975})
+spot15 = Spot.create({name: 'Pont du Galetas, France', description: 'Located in the south east of France, this hidden gem offers great cliff jumping', lat: 43.79740, lng: 6.23975})
 spot15.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/pont_du__galetas_france.jpg"), filename: 'galetas.jpg')
 
-spot16 = Spot.create({name: 'Puerto Vallarta', description: 'Away from the crowded center of town, this wonderful area of Mexico provides a number of pristine beaches', lat: 20.58939, lng: 105.24359})
+spot16 = Spot.create({name: 'Puerto Vallarta, Mexico', description: 'Away from the crowded center of town, this wonderful area of Mexico provides a number of pristine beaches', lat: 20.58939, lng: 105.24359})
 spot16.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/puerto+vallarta.jpg"), filename: 'pv.jpg')
 
 spot17 = Spot.create({name: 'Punta de Mita, Mexico', description: 'A lovely penninsula with great surfing and heavenly beaches', lat: 20.77385, lng: 105.51675})
@@ -72,7 +72,7 @@ spot20.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/sp
 spot21 = Spot.create({name: 'Grand Teaton National Park, Wyoming', description: 'Located near yellowstone, this incredible mountain range is located next to a pristine lake', lat: 43.81089, lng: 110.68122})
 spot21.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/teatons.jpg"), filename: 'teatons.jpg')
 
-spot22 = Spot.create({name: 'Tierra del Fuego', description: 'Another world experience located and the southern most point of south america, this remote outpost is the definition of remote', lat: 54.55941, lng: 67.3242})
+spot22 = Spot.create({name: 'Tierra del Fuego, Argentina', description: 'Another world experience located and the southern most point of south america, this remote outpost is the definition of remote', lat: 54.55941, lng: 67.3242})
 spot22.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/tierra_del_fuego.jpg"), filename: 'tierraDelFuego.jpg')
 
 spot23 = Spot.create({name: 'Torres del Paine, Chile', description: 'High in the mountains, this incredible and other worldly location provides a fresh escape from civilization and amazing views', lat: 50.97355, lng: 72.87389})
