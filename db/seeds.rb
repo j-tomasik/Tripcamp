@@ -5,14 +5,18 @@ require 'open-uri'
 # Examples:
 User.destroy_all
 Spot.destroy_all
+Review.destroy_all
 
 
 demoUser = User.create({firstname: 'demo-user', lastname:'user-demo', zip: 94707, email: 'demo@starting.com', password: 'demo-user'})
-
+user01 = User.create({firstname: 'Presley', lastname: 'Reed', zip: 94707, email:'presley@reed.com', password: 'group1'})
 
 spot01 = Spot.create({name: 'Piodao, Portugal', description: 'Located in the Serra de Estrela region of Portugal, which is the highest location in the country', lat: 40.22978, lng: 7.82472})
 spot01.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/Piodao_serra_da_estrela.jpeg"), filename: 'piodao.jpeg')
-review1 = Review.create({body: 'Wow this was such an amazing trip!', recommend: true, spot_id: 1, author_id: 1})
+
+review1 = Review.create({body: 'Wow this was such an amazing trip!', recommend: true, spot_id: spot01.id, author_id: demoUser.id})
+review2 = Review.create({body: 'The views here were out of this world', recommend: true, spot_id: spot01.id, author_id: user01.id})
+
 
 spot02 = Spot.create({name: 'Moraine Lake, Canada', description: 'Near to the town of Banff, this location is best traveled in the summer', lat: 51.32154, lng: 116.18509})
 spot02.photo.attach(io: open("https://tripcamp-dev.s3.us-west-1.amazonaws.com/banff_moraine_lake.jpg"), filename: 'moraineLake.jpg')

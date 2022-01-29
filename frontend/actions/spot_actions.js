@@ -9,14 +9,19 @@ export const receiveSpots = spots => {
     spots,
     })
 };
-export const receiveSpot =(spot) => ({
-    type: RECEIVE_SPOT,
-    spot
-})
+export const receiveSpot = ({spot, reviews, authors }) => {
+    console.log()
+    return({type: RECEIVE_SPOT,
+    spot,
+    reviews,
+    authors,
+    })
+}
 
-export const receiveReview = (review) => ({
+export const receiveReview = ({review, author}) => ({
     type: RECIEVE_REVIEW,
-    review
+    review,
+    author
 });
 
 export const createReview = review => dispatch => (

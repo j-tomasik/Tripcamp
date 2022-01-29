@@ -15,17 +15,20 @@ class IndexItem extends React.Component {
     // }
 
     render() {
-        const { name, description, photoUrl, id } = this.props.spot;
+        const { name, description, photoUrl, id, reviews } = this.props.spot;
 
         //not sure if this works, from hip trip
-        let spotRating = 0;
-        Object.values(this.props.spot.reviews).forEach((el) => {
-            if (el.recomended === true) {
-                (spotRating += 1)
-            }
-        });
-        spotRating = Math.floor((spotRating / Object.values(this.props.spot.reviews).length) * 20)
-            //add these in to access info if I want to render in component
+        // let spotRating = 0;
+        // Object.values(this.props.spot.reviews).forEach((el) => {
+        //     if (el.recomended === true) {
+        //         (spotRating += 1)
+        //     }
+        // });
+        
+        // spotRating = Math.floor((spotRating / Object.values(this.props.spot.reviews).length) * 20)
+            
+        
+        //add these in to access info if I want to render in component
             // < h3 className = "spot-index-header-hundred-percent" > { spotRating } %</h3 >
             //     <h5 className="spot-show-header-review-count">- {Object.keys(reviews).length} Reviews</h5>
 
