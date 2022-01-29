@@ -20,12 +20,12 @@ const receiveAllReviews = (reviews) => ({
 //     reviewId
 // });
 
-export const createReview = (review) => dispatch => {
+// export const createReview = (review) => dispatch => {
 
-    return APIUtil.createReview(review).then((review) => dispatch(receiveReview(review)))
-}
+//     return APIUtil.createReview(review).then((review) => dispatch(receiveReview(review)))
+// }
 
-export const fetchAllReview = (spotId) => dispatch => {
+export const fetchAllReviews = (spotId) => dispatch => {
     return APIUtil.fetchAllReviews(spotId).then((reviews) => dispatch(receiveAllReviews(reviews)));
 }
 

@@ -13,7 +13,11 @@ class Api::SpotsController < ApplicationController
 
     def show
     @spot = Spot.find(params[:id])
-    render :show
+        if @spot
+            render :show
+        else
+            render json: @spot.errors.full_messages, status: 422
+        end
     end
 
     private 

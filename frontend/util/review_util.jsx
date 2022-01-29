@@ -4,3 +4,7 @@ export const fetchAllReviews = (spotId) => {
         url: `/api/spots/${spotId}/reviews`
     });
 }
+
+
+
+// export const fetch

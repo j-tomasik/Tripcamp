@@ -1,5 +1,5 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
-import { RECEIVE_REVIEW } from '../actions/spot_actions'
+import { RECEIVE_REVIEW } from '../actions/review_actions'
 
 
 const usersReducer = (state = {}, action) => {

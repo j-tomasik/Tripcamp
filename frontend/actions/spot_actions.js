@@ -10,7 +10,6 @@ export const receiveSpots = spots => {
     })
 };
 export const receiveSpot = ({spot, reviews, authors }) => {
-    console.log()
     return({type: RECEIVE_SPOT,
     spot,
     reviews,

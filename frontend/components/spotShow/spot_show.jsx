@@ -9,12 +9,17 @@ class SpotShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchSpot(this.props.match.params.spotId);
+        this.props.fetchAllReviews(this.props.match.params.spotId);
     }
 
     render() {
         if (!this.props.spot) {
             console.log('null');
         return null}
+        if (this.props.reviews.length === 0) {
+            return null
+        }
+
         const { spot, spotId, fetchSpot } = this.props
 
         const nameArr = spot.name.split(',');

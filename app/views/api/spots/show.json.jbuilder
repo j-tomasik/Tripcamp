@@ -4,15 +4,16 @@ json.spot do
     json.reviewIds @spot.reviews.pluck(:id)
 end
 
-@bench.reviews.includes(:author).each do |review|
+@spot.reviews.each do |review|
     json.reviews do 
         json.set! review.id do 
             json.partial! 'api/reviews/review', review: review
         end
-
-    json.authors do 
-        json.set! review.author.id do 
-            json.extract! review.author, :id, :first_name, :last_name
-        end
     end
+        
+    # json.review.author do 
+    #     json.set! review.author.id do 
+    #         json.extract! review.author, :id, :first_name, :last_name
+    #     end
+    # end
 end

@@ -11,6 +11,11 @@ class Api::ReviewsController < ApplicationController
         end
     end
 
+    def index
+        @reviews = Review.all.where(spot_id: params[:spot_id])
+        render :index
+    end
+
     private
 
     def review_params
