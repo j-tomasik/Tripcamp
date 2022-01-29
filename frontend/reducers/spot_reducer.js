@@ -12,7 +12,7 @@ const spotsReducer = (oldState = {}, action) => {
             return Object.assign({}, oldState, newSpot)
 
         case RECIEVE_REVIEW:
-            const { review } = action.review;
+            const { review } = action;
             const newState = Object.assign({}, oldState);
                 
             newState[review.spot_id].reviewIds.push(review.id)
