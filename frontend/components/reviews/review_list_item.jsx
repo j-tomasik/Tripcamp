@@ -20,9 +20,9 @@ class ReviewListItem extends React.Component {
                     {body} 
                 </span>
 
-                <div>
+                <span>
                     by {review.authorFirstName} 
-                </div>
+                </span>
             </div>
         )
     }
