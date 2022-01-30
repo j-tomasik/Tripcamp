@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 //Components
 import Root from './components/root';
 import configureStore from './store/store';
-import { fetchSpots } from './actions/spot_actions'
+import { fetchSpot } from './actions/spot_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
-    window.fetchSpots = fetchSpots()
+    window.fetchSpot = fetchSpot
     window.getState = store.getState;
     window.dispatch = store.dispatch;
 

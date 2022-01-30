@@ -2,7 +2,7 @@ import * as APIUtil from '../util/spot_api_util';
 
 export const RECEIVE_SPOTS = 'RECEIVE_SPOTS';
 export const RECEIVE_SPOT = 'RECEIVE_SPOT';
-export const RECIEVE_REVIEW = 'RECIEVE_REVIEW';
+export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
 export const receiveSpots = spots => {
     return ({type: RECEIVE_SPOTS,
@@ -18,7 +18,7 @@ export const receiveSpot = ({spot, reviews, authors }) => {
 }
 
 export const receiveReview = ({review, author}) => ({
-    type: RECIEVE_REVIEW,
+    type: RECEIVE_REVIEW,
     review,
     author
 });

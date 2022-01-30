@@ -1,4 +1,4 @@
-import { RECEIVE_SPOTS, RECEIVE_SPOT, RECIEVE_REVIEW } from "../actions/spot_actions";
+import { RECEIVE_SPOTS, RECEIVE_SPOT, RECEIVE_REVIEW } from "../actions/spot_actions";
 
 
 const spotsReducer = (oldState = {}, action) => {
@@ -11,7 +11,7 @@ const spotsReducer = (oldState = {}, action) => {
             const newSpot = {[action.spot.id]: action.spot };
             return Object.assign({}, oldState, newSpot)
 
-        case RECIEVE_REVIEW:
+        case RECEIVE_REVIEW:
             const { review } = action;
             const newState = Object.assign({}, oldState);
                 
