@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReviewList from '../reviews/review_list';
+
 
 
 class SpotShow extends React.Component {
@@ -16,12 +18,13 @@ class SpotShow extends React.Component {
         if (!this.props.spot) {
             console.log('null');
         return null}
+
         if (this.props.reviews.length === 0) {
             return null
         }
 
         const { spot, spotId, fetchSpot } = this.props
-
+        console.log(spot)
         const nameArr = spot.name.split(',');
         const spotName = nameArr[0];
         const spotCountry = nameArr[1];
@@ -29,8 +32,8 @@ class SpotShow extends React.Component {
         // const spots = {
         // [spotId]: spot
         // };
-            
-        return (
+            // console.log(this.props.reviews)
+        return (    
             <div className='spot-show'>
                     <div className='photos'>
                         <img className='index-image' src={spot.photoUrl} />
@@ -128,6 +131,7 @@ class SpotShow extends React.Component {
                     
                 </div>
 
+            <ReviewList reviews={this.props.reviews} session={this.props.session}/>
             </div>
             )
     }  

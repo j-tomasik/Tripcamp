@@ -7,16 +7,22 @@ class ReviewListItem extends React.Component {
     }
 
     render() {
+
+        const { review } = this.props;
+        // const author = users[review.author_id];
+        const { body } = review;
+        // console.log(review)
+        
+
         return(
             <div className='review-item'>
                 <span className='body'>
-                    {this.props.review.body}
-                </span>
-                //author name
-                <span>
-                    
+                    {body} 
                 </span>
 
+                <div>
+                    by {review.authorFirstName} 
+                </div>
             </div>
         )
     }
