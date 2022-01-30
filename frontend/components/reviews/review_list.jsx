@@ -16,6 +16,7 @@ class ReviewList extends React.Component {
             <div className='spot-review'>
                 {/* <span className='review-count'>{count}</span> */}
                 <div className='reviews'>
+                    <h1><b>Reviews</b></h1>
                     {reviews}
                 </div>
             </div>

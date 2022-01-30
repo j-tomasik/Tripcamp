@@ -10,8 +10,9 @@ class SpotShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchSpot(this.props.match.params.spotId);
-        this.props.fetchAllReviews(this.props.match.params.spotId);
+        this.props.fetchSpot(this.props.match.params.spotId).then(            
+            this.props.fetchAllReviews(this.props.match.params.spotId)
+        )
     }
 
     render() {
@@ -29,10 +30,7 @@ class SpotShow extends React.Component {
         const spotName = nameArr[0];
         const spotCountry = nameArr[1];
     
-        // const spots = {
-        // [spotId]: spot
-        // };
-            // console.log(this.props.reviews)
+        
         return (    
             <div className='spot-show'>
                     <div className='photos'>
@@ -123,15 +121,16 @@ class SpotShow extends React.Component {
                             <h2 className='activities'>Activities</h2>
                             <p>Offered on the Host's property or nearby</p>
                         </section>
+
+                        <section>
+                        <ReviewList reviews={this.props.reviews} session={this.props.session} />
+                        </section>
                     </div>
-                
-
                     
-
                     
                 </div>
 
-            <ReviewList reviews={this.props.reviews} session={this.props.session}/>
+            
             </div>
             )
     }  
