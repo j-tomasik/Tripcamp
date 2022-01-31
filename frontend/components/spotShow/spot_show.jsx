@@ -132,10 +132,9 @@ class SpotShow extends React.Component {
 
                             }
                         </section>
-                        <Link to={`/spots/${spotId}/reviews`}>Create Review</Link>
-                        {/* <div>
-                            <ReviewForm spotId={spotId} createReview={this.props.createReview}/>
-                        </div> */}
+                                <Link to={`/spots/${spotId}/reviews`} className='create-review'>Create New Review</Link>
+                    
+                        
                     </div>
                     
                     
