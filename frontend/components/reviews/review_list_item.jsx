@@ -5,23 +5,23 @@ import { useSelector } from 'react-redux';
 class ReviewListItem extends React.Component {
     constructor(props) {
         super(props)
+        this.handleDelete = this.handleDelete.bind(this);
     }
+
+    handleDelete = (e) => {
+            e.preventDefault();
+            this.props.deleteReview(this.props.review.id);
+            location.reload();
+        }
+
 
     render() {
 
         const { review } = this.props;
-        // const author = users[review.author_id];
-        const { body } = review;
-        // const currentUserId = useSelector((state) => state.ession.id)
-        // console.log(review)
 
-        // const handleDelete = (e) => {
-        //     e.preventDefault();
-        //     dispatchEvent(deleteReview(review.id))
-        // }
-        
-            // console.log(this.props.session)
-        
+        const { body } = review;
+
+
             console.log(this.props.review)
         
         const delete_button = (this.props.session === this.props.review.authorId ? <button onClick={this.handleDelete} className="review-delete-button">Delete Review</button> : null)

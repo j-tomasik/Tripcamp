@@ -16,6 +16,12 @@ class Api::ReviewsController < ApplicationController
         render :index
     end
 
+    def destroy 
+        @review = current_user.reviews.find(params[:id])
+        @review.destroy
+        render :show
+    end
+
     private
 
     def review_params

@@ -8,7 +8,7 @@ class ReviewList extends React.Component {
     }
 
     render() {
-        const reviews = this.props.reviews.map(review => <ReviewListItem key={review.id} session={this.props.session} review={review}/>)
+        const reviews = this.props.reviews.map(review => <ReviewListItem key={review.id} session={this.props.session} review={review} deleteReview={this.props.deleteReview}/>)
         const count = this.props.reviews.length ? <h3>{this.props.reviews.length} Reviews</h3> : <h3>No review yet</h3>
     
         return(

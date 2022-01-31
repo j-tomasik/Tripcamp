@@ -121,7 +121,7 @@ class SpotShow extends React.Component {
                         </section>
 
                         <section>
-                        <ReviewList reviews={this.props.reviews} session={this.props.session} />
+                        <ReviewList spot={this.props.spot} state={this.props.state} reviews={this.props.reviews} session={this.props.session} deleteReview={this.props.deleteReview} />
                         </section>
                     </div>
                     

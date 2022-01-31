@@ -1,9 +1,8 @@
-import { RECEIVE_SPOT } from '../actions/spot_actions';
-import { RECEIVE_REVIEW, RECEIVE_REVIEWS } from '../actions/review_actions'
+import { RECEIVE_REVIEW, RECEIVE_REVIEWS, REMOVE_REVIEW } from '../actions/review_actions'
 
 const reviewsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
-    // console.log(action);
+
     
     switch (action.type) {
         // case RECEIVE_SPOT:
@@ -15,7 +14,11 @@ const reviewsReducer = (oldState = {}, action) => {
             return newState
         case RECEIVE_REVIEWS:
             return action.reviews;
-    
+
+        // case REMOVE_REVIEW:
+        //     const newState = Object.assign({}, oldState)
+        //     delete newState[action.reviewId]
+        //     return newState;
         default:
             return oldState;
     }

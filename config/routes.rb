@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :spots, only: [:index, :show, :create] do
         resources :reviews, only: [:create, :show, :index, :update, :destroy]
       end
+
+      resources :reviews, only: [:index, :create, :update, :destroy]
   end
 
   root to: "static_pages#root"
