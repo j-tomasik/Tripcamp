@@ -19,22 +19,13 @@ class ReviewListItem extends React.Component {
         //     e.preventDefault();
         //     dispatchEvent(deleteReview(review.id))
         // }
-
-        // const reviewButtons = 
-        //     currentUserId === review.userId ? (
-        //         <div className='review-item-buttons'>
-        //             <button className='edit-review' onClick={editForm}>
-        //                 Edit
-        //             </button>
-
-        //             <button className='delete-review' onClick={handleDelete}>
-        //                 Delete
-        //             </button>
-        //         </div>
-        //     ) : (
-        //         ''
-        //     );
         
+            // console.log(this.props.session)
+        
+            console.log(this.props.review)
+        
+        const delete_button = (this.props.session === this.props.review.authorId ? <button onClick={this.handleDelete} className="review-delete-button">Delete Review</button> : null)
+        const edit_button = (this.props.session === this.props.review.authorId ? <button onClick={this.handleUpdate} className="review-edit-button">Edit Review</button> : null)
 
         return(
             <div className='review-item'>
@@ -48,7 +39,11 @@ class ReviewListItem extends React.Component {
                     </span>
                 </div>
 
-                {/* {reviewButtons} */}
+                <div className='author-btns'>
+                    {delete_button}
+                    {edit_button}
+                </div>
+                
             </div>
         )
     }

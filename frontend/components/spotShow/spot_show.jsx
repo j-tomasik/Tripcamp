@@ -17,7 +17,6 @@ class SpotShow extends React.Component {
 
     render() {
         if (!this.props.spot) {
-            console.log('null');
         return null}
 
         if (this.props.reviews.length === 0) {
@@ -25,7 +24,6 @@ class SpotShow extends React.Component {
         }
 
         const { spot, spotId, fetchSpot } = this.props
-        console.log(spot)
         const nameArr = spot.name.split(',');
         const spotName = nameArr[0];
         const spotCountry = nameArr[1];

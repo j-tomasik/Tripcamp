@@ -7,12 +7,13 @@ import { fetchAllReviews } from '../../actions/review_actions';
 
 const mSTP = (state, { match }) => {
     const spotId = parseInt(match.params.spotId);
-    const spot = selectSpot(state.entities, spotId);
-    const reviews = Object.values(state.entities.reviews);
+    // const spot = selectSpot(state.entities, spotId);
     return {
-        spotId,
-        spot,
-        reviews
+        spotId: spotId,
+        spot: state.entities.spots[spotId],
+        reviews: Object.values(state.entities.reviews),
+        session: state.session.id,
+        state: state
     };
 };
 
