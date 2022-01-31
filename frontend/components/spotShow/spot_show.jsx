@@ -19,9 +19,9 @@ class SpotShow extends React.Component {
         if (!this.props.spot) {
         return null}
 
-        if (this.props.reviews.length === 0) {
-            return null
-        }
+        // if (this.props.reviews.length === 0) {
+        //     return null
+        // }
 
         const { spot, spotId, fetchSpot } = this.props
         const nameArr = spot.name.split(',');
@@ -121,7 +121,10 @@ class SpotShow extends React.Component {
                         </section>
 
                         <section>
-                        <ReviewList spot={this.props.spot} state={this.props.state} reviews={this.props.reviews} session={this.props.session} deleteReview={this.props.deleteReview} />
+                            {this.props.reviews && 
+                                <ReviewList spot={this.props.spot} state={this.props.state} reviews={this.props.reviews} session={this.props.session} deleteReview={this.props.deleteReview} />
+
+                            }
                         </section>
                     </div>
                     
