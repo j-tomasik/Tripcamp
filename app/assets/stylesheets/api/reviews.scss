@@ -142,7 +142,31 @@
     margin-left: auto;
 }
 
-.review-body {
-    
+.fa-thumbs-down {
+    content: '/f165';
+}
+
+.review-exit {
+    padding: 5px 12px;
+    background-color: #40d9ac;
+    border: 3px solid #40d9ac;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 15px;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.submit-review {
+    padding: 5px 12px;
+    background-color: #40d9ac;
+    border: 3px solid #40d9ac;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 15px;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
 }
 

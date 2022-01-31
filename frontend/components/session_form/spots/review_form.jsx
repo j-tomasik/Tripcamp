@@ -50,16 +50,16 @@ class ReviewForm extends React.Component {
                                 onClick={this.handleClick}
                                 data-recommend="true"
                             >
-                                <i className="fas fa-thumbs-up"></i>
+                                <i className="fas fa-thumbs-up">Recomend</i>
                             </button>
 
                             <button
                                 id="review-false"
-                                className="review-button selected-option"
+                                className="review-button "
                                 onClick={this.handleClick}
                                 data-recommend="false"
                             >
-                                <i className="has fa-thumbs-down"></i>
+                                <i className="has fa-thumbs-down">Don't Recommend</i>
                             </button>
                         </div>
                     </label>
