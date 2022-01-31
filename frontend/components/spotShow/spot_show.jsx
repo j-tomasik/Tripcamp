@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewList from '../reviews/review_list';
+import ReviewForm from './review_form'
 
 
 
@@ -15,14 +16,19 @@ class SpotShow extends React.Component {
         )
     }
 
+    handleReviewClick(e) {
+        e.preventDefault();
+
+        if(!this.props.session) {
+            this.props.history.push('/login')
+        }
+    }
+
     render() {
         if (!this.props.spot) {
         return null}
 
-        // if (this.props.reviews.length === 0) {
-        //     return null
-        // }
-
+    
         const { spot, spotId, fetchSpot } = this.props
         const nameArr = spot.name.split(',');
         const spotName = nameArr[0];
@@ -126,6 +132,10 @@ class SpotShow extends React.Component {
 
                             }
                         </section>
+                        <Link to={`/spots/${spotId}/reviews`}>Create Review</Link>
+                        {/* <div>
+                            <ReviewForm spotId={spotId} createReview={this.props.createReview}/>
+                        </div> */}
                     </div>
                     
                     

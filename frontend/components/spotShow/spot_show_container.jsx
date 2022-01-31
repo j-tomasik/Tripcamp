@@ -4,6 +4,7 @@ import { fetchSpot } from '../../actions/spot_actions';
 import { selectSpot, selectReviewsForSpot } from '../../reducers/selectors'
 import SpotShow from './spot_show';
 import { fetchAllReviews, deleteReview } from '../../actions/review_actions';
+import { createReview } from '../../actions/spot_actions';
 
 
 const mSTP = (state, { match }) => {
@@ -21,7 +22,8 @@ const mSTP = (state, { match }) => {
 const mDTP = dispatch => ({
     fetchSpot: id => dispatch(fetchSpot(id)),
     fetchAllReviews: spotId => dispatch(fetchAllReviews(spotId)),
-    deleteReview: reviewId => dispatch(deleteReview(reviewId))
+    deleteReview: reviewId => dispatch(deleteReview(reviewId)),
+    createReview: review => dispatch(createReview(review)),
 });
 
 export default connect(mSTP,mDTP)(SpotShow);

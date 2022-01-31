@@ -7,8 +7,8 @@ const usersReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, state, { [action.currentUser.id]: action.currentUser });
-        case RECEIVE_REVIEW:
-            return Object.assign({}, state, { [action.author.id]: action.author });
+        // case RECEIVE_REVIEW:
+        //     return Object.assign({}, state, { [action.author.id]: action.author });
         // case RECEIVE_SPOT:
         //     return Object.assign({}, state, action.authors);
         default:
