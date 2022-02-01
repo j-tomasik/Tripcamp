@@ -1,8 +1,6 @@
 json.review do
     json.partial! '/api/reviews/review', review: @review
-end
-
-json.author do 
-    json.partial! '/api/users/user', user: @review.author
+    json.author_first_name @review.author.firstname  
+    
 end
 

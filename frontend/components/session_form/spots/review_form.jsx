@@ -40,7 +40,6 @@ class ReviewForm extends React.Component {
     }
 
     render() {
-        console.log('render works')
         return(
             <div className="review-form-container">
                 <form onSubmit={this.handleSubmit} className="review-form">Review
@@ -55,7 +54,7 @@ class ReviewForm extends React.Component {
                                 onClick={this.handleClick}
                                 data-recommend="true"
                             >
-                                <i className="fas fa-thumbs-up">Recomend</i>
+                                <i className="fas fa-thumbs-up">Recommend</i>
                             </button>
 
                             <button
