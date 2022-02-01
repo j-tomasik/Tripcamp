@@ -7,8 +7,7 @@ class ReviewForm extends React.Component {
         super(props);
 
         this.state = {
-                recommend: true,
-                //recommend: recommend.getAttribute("data-recommend")
+            recommend: true,
                 body: '',
                 spot_id: this.props.spotId,
                 author_id: this.props.authorId
@@ -20,7 +19,6 @@ class ReviewForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // const recommend = $(".selected-option")[0];
         const review = Object.assign({}, this.state);
         this.props.createReview(review);
         this.props.history.replace(`/spots/${this.props.spotId}`)
@@ -31,6 +29,12 @@ class ReviewForm extends React.Component {
         $(".selected-option").removeClass("selected-option");
         $(e.currentTarget).addClass("selected-option");
     };
+
+    onChange = (e) => {
+        this.setState({
+            recommend: e.target.value
+        }) 
+    }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value})
@@ -48,23 +52,33 @@ class ReviewForm extends React.Component {
                     <label id='review-recommend'>
                         <span>Like this campsite?</span>
                         <div className="yes-no-buttons">
-                            <button
-                                id="review-true"
-                                className="review-button selected-option"
-                                onClick={this.handleClick}
-                                data-recommend="true"
-                            >
-                                <i className="fas fa-thumbs-up">Recommend</i>
-                            </button>
+                            <label className="recommend">Recommend
+                            
+                                <input
+                                    type="radio"
+                                    value={true}
+                                    name="recommend"
+                                    
+                                    className="review-button selected-option"
+                                    
+                                    onChange={this.onChange}
+                                />
 
-                            <button
-                                id="review-false"
-                                className="review-button "
-                                onClick={this.handleClick}
-                                data-recommend="false"
-                            >
-                                <i className="has fa-thumbs-down">Don't Recommend</i>
-                            </button>
+                                
+                            </label>
+
+                            <label className="recommend">Don't Recommend
+                                <input
+                                    type="radio"
+                                    value={false}
+                                    name="recommend"
+                                    className="review-button"
+
+                                    onChange={this.onChange}
+                                />
+
+                            
+                            </label>
                         </div>
                     </label>
                 <button className="submit-review" type='submit'>Leave Review</button>

@@ -91,9 +91,10 @@
 }
 
 .yes-no-buttons {
-    width: 30%;
+    width: 35%;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 30px;
 }
 
 .review-form textarea {
@@ -114,14 +115,15 @@
     color: #40d9ac;
 }
 
-#review-recommend {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.recommend {
+    padding-right: 20px;
 }
 
-#review-reccomend span {
+#review-recommend {
+    width: 100%;
+}
+
+#review-recommend span {
     font-size: 20px;
     font-weight: 500;
 }
@@ -136,15 +138,11 @@
     background-color: #40d9ac;
 }
 
-.submit-review {
-    padding:  5px 12px;
-    margin-top: 20px;
-    margin-left: auto;
-}
-
-.fa-thumbs-down {
-    content: '/f165';
-}
+// .submit-review {
+//     padding:  5px 12px;
+//     margin-top: 20px;
+//     margin-left: auto;
+// }
 
 .review-exit {
     padding: 5px 12px;
@@ -165,6 +163,7 @@
     font-size: 18px;
     font-weight: 500;
     margin: 10px 15px;
+    margin-left: 0px;
     border-radius: 2px;
     color: #fff;
     cursor: pointer;
