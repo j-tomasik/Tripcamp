@@ -23,7 +23,7 @@ class ReviewForm extends React.Component {
         // const recommend = $(".selected-option")[0];
         const review = Object.assign({}, this.state);
         this.props.createReview(review);
-        console.log(this.props)
+        console.log('submit is handled', this.props)
         // this.props.fetchSpot(this.props.spotId);
         this.props.history.replace(`/spots/${this.props.spotId}`)
     }
@@ -42,7 +42,7 @@ class ReviewForm extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        console.log('render works')
         return(
             <div className="review-form-container">
                 <form onSubmit={this.handleSubmit} className="review-form">Review

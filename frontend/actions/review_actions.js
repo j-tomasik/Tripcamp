@@ -5,10 +5,14 @@ export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 
-const receiveReview = (review) => ({
-    type: RECEIVE_REVIEW,
-    review
-});
+const receiveReview = (review) => {
+    // debugger
+    return{
+        type: RECEIVE_REVIEW,
+        review
+
+}
+};
 
 const receiveAllReviews = (reviews) => ({
     type: RECEIVE_REVIEWS,
