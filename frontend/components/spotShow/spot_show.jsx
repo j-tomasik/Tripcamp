@@ -96,11 +96,13 @@ class SpotShow extends React.Component {
                         <section className='features'>
                             <div className='spacing'>
                                 <div className='area'>
-                                    <h2>Lodging provided</h2>
-                                </div>
+                                    <h2>Lodging provided</h2>                               
+                                    <ul>
+                                        <li>Water proof tent</li>
+                                        <li>Host's guest room</li>
+                                        <li>RV upgrade avaible</li>
+                                    </ul>
 
-                                <div>
-                                    
                                 </div>
                             </div>
 
@@ -129,23 +131,23 @@ class SpotShow extends React.Component {
 
                         </section>
 
-                        <section className='details'>
+                        <div className='details'>
                             <h2 className='details-header'>Details</h2>
                             <div className='details-content'>
                                 <span><b>Check in:</b> After 2PM</span>
-                                <span><b>Check out:</b>Before 12PM</span>
-                                <span><b>Cancelation ploicy:</b>Moderate</span>
+                                <span><b>Check out:</b> Before 12PM</span>
+                                <span><b>Cancelation policy:</b> Moderate</span>
                             </div>
 
                             <div>
-                                <span><b>On arrival</b>Proceed to camp location</span>
-                                <span><b>Minimum nights:</b>2</span>
-                                <span><b>Accepts bookings:</b>6 months out</span>
+                                <span><b>On arrival:</b> Proceed to camp location</span>
+                                <span><b>Minimum nights:</b> 2</span>
+                                <span><b>Accepts bookings:</b> 6 months out</span>
                             </div>
-                        </section>
+                        </div>
 
                         <section className='activities'>
-                            <h2 className='activities'>Activities</h2>
+                            <h2>Activities</h2>
                                 <ul>
                                     <li>Sight seeing</li>
                                     <li>Biking</li>

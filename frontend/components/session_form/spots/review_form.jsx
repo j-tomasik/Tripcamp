@@ -23,8 +23,6 @@ class ReviewForm extends React.Component {
         // const recommend = $(".selected-option")[0];
         const review = Object.assign({}, this.state);
         this.props.createReview(review);
-        console.log('submit is handled', this.props)
-        // this.props.fetchSpot(this.props.spotId);
         this.props.history.replace(`/spots/${this.props.spotId}`)
     }
 
@@ -70,7 +68,6 @@ class ReviewForm extends React.Component {
                             </button>
                         </div>
                     </label>
-                    {/* <Link className='submit-review' to={`/spots/${this.state.spot_id}`}>Link to Show</Link> */}
                 <button className="submit-review" type='submit'>Leave Review</button>
                 <button className="review-exit">Close</button>
                 </form>

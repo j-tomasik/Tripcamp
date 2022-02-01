@@ -5,12 +5,8 @@ const reviewsReducer = (oldState = {}, action) => {
 
     
     switch (action.type) {
-        // case RECEIVE_SPOT:
-        //     return Object.assign({}, oldState, action.reviews);
-        
         case RECEIVE_REVIEW:
             const newState = Object.assign({}, oldState)
-            // debugger
             newState[action.review.review.id] = action.review.review
             return newState
         case RECEIVE_REVIEWS:
