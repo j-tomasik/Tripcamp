@@ -87,9 +87,9 @@ class SpotShow extends React.Component {
                         <section className='header-container'>
                             <p className='country-location'>{spotCountry}</p>
                             <h1 className='name'>{spotName}</h1>
-                            <div className='rating'>Reccomended</div>
+                            <div className='rating'>Recommended</div>
                             <div className='host-description'><b>Hosted by Jack</b></div>
-                            <div className='description'>{spot.description}</div>
+                            <div className='description'><span><b>Description:</b> </span> {spot.description}</div>
 
                         </section>
 
@@ -115,9 +115,10 @@ class SpotShow extends React.Component {
                         </section>
 
                         <section className='details'>
-                            <h2 className='details'>Details</h2>
-                            <div className='content'>
-
+                            <h2 className='details-header'>Details</h2>
+                            <div className='details-content'>
+                                <ul></ul>
+                                <ul></ul>
                             </div>
                         </section>
 
@@ -132,7 +133,11 @@ class SpotShow extends React.Component {
 
                             }
                         </section>
+                        <br />
+                        </div>
                                 <Link to={`/spots/${spotId}/reviews`} className='create-review'>Create New Review</Link>
+                        <div>
+                            
                     
                         
                     </div>

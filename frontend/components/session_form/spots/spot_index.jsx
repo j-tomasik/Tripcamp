@@ -8,6 +8,8 @@ class SpotIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchSpots();
+        window.scrollTo(0, 0);
+        
     }
 
     render() {

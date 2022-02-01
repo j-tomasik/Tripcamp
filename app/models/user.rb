@@ -11,9 +11,7 @@ after_initialize :ensure_session_token
 #     foreign_key: :author_id
 # has_one_attached :photo
 # has_many :favorites
-# has_many :favorite_benches,
-#     through: :favorites,
-#     source: :bench
+#
 
 has_many :reviews,
     foreign_key: :author_id

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "react-router-dom";
 
 
 class ReviewForm extends React.Component {
@@ -13,15 +14,18 @@ class ReviewForm extends React.Component {
                 author_id: this.props.authorId
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        console.log('component initialize')
+        
     };
+    
 
     handleSubmit(e) {
         e.preventDefault();
         // const recommend = $(".selected-option")[0];
         const review = Object.assign({}, this.state);
         this.props.createReview(review);
-        // location.reload()
+        console.log(this.props)
+        // this.props.fetchSpot(this.props.spotId);
+        this.props.history.replace(`/spots/${this.props.spotId}`)
     }
 
     handleClick = (e) => {
@@ -32,6 +36,9 @@ class ReviewForm extends React.Component {
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value})
+    }
+    componentDidMount() {
+        window.scrollTo(0, 0);
     }
 
     render() {
@@ -63,7 +70,7 @@ class ReviewForm extends React.Component {
                             </button>
                         </div>
                     </label>
-
+                    {/* <Link className='submit-review' to={`/spots/${this.state.spot_id}`}>Link to Show</Link> */}
                 <button className="submit-review" type='submit'>Leave Review</button>
                 <button className="review-exit">Close</button>
                 </form>
