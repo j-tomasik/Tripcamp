@@ -98,17 +98,32 @@ class SpotShow extends React.Component {
                                 <div className='area'>
                                     <h2>Lodging provided</h2>
                                 </div>
+
+                                <div>
+                                    
+                                </div>
                             </div>
 
                             <div className='spacing'>
                                 <div className='essential'>
-                                    <h2>Lodging provided</h2>
+                                    <h2>Essentials</h2>
+                                    <ul>
+                                        <li>Campires allowed</li>
+                                        <li>Pets allowed</li>
+                                        <li>Toilet available</li>
+                                    </ul>
                                 </div>
                             </div>
 
                             <div className='spacing'>
                                 <div className='amenity'>
                                     <h2>Amenities</h2>
+                                    <ul>
+                                        <li>Potable water avaible</li>
+                                        <li>Shower avaible</li>
+                                        <li>Laundry absent</li>
+                                        <li>Wifi available</li>
+                                    </ul>
                                 </div>
                             </div>
 
@@ -117,13 +132,25 @@ class SpotShow extends React.Component {
                         <section className='details'>
                             <h2 className='details-header'>Details</h2>
                             <div className='details-content'>
-                                <ul></ul>
-                                <ul></ul>
+                                <span><b>Check in:</b> After 2PM</span>
+                                <span><b>Check out:</b>Before 12PM</span>
+                                <span><b>Cancelation ploicy:</b>Moderate</span>
+                            </div>
+
+                            <div>
+                                <span><b>On arrival</b>Proceed to camp location</span>
+                                <span><b>Minimum nights:</b>2</span>
+                                <span><b>Accepts bookings:</b>6 months out</span>
                             </div>
                         </section>
 
                         <section className='activities'>
                             <h2 className='activities'>Activities</h2>
+                                <ul>
+                                    <li>Sight seeing</li>
+                                    <li>Biking</li>
+                                    <li>Hiking</li>
+                                </ul>
                             <p>Offered on the Host's property or nearby</p>
                         </section>
 

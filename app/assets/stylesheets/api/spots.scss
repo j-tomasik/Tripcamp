@@ -7,12 +7,17 @@
 }
 
 .index-image {
-    height: 480px;
-    width: 480px;
+    height: 550px;
+    width: 550px;
     object-fit: cover;
     display: block;
-    z-index: 20;
+    z-index: 2;
     padding: 15px;
+}
+
+.photos {
+    margin-left: 35vh;
+    padding-top: 50px;
 }
 
 
@@ -37,7 +42,8 @@
     float: right;
     position: sticky;
     background-color: #fff;
-    margin-top: -200px;
+    margin-top: -150px;
+    margin-right: -100px;
     display: block;
     right: 0;
     padding: 15px;
@@ -147,6 +153,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     padding-bottom: 30px;
+    border-bottom: 3px solid lightgray;
 }
 
 
