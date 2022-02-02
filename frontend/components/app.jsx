@@ -11,32 +11,26 @@ import NavBar from './greeting/home_navbar'
 import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
+import SpotIndexContainer from './session_form/spots/spot_index_container';
+import SpotShowContainer from './spotShow/spot_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import ReviewFormContainer from './session_form/spots/review_form_container';
+import ReviewEditFormContainer from './reviews/review_edit_form_container';
 
 const App = () => (
-    <div>
-
+    <div className='parent'>
         
         <NavBar />
-
-            {/* <navbar className="nav-bar splash">
-                <div className='left-nav'>
-                    <Link to="/" className="header-link" replace>
-                        <h1>Welcome to Trip Camp!</h1>
-                    </Link>
-                </div>
-
-                <div className='nav-right'>
-                    <GreetingContainer />
-                </div>
-            </navbar> */}
         
 
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+            <Route exact path="/spots/:spotId" component={SpotShowContainer} />
+            <Route exact path='/' component={SpotIndexContainer} />
+            <ProtectedRoute exact path='/spots/:spotId/reviews' component={ReviewFormContainer} />
+            <ProtectedRoute exact path='/spots/:spotId/reviews/:id' component={ReviewEditFormContainer} />
             {/* <ProtectedRoute exact path="/spots/new" component={SpotFormContainer} /> */}
-            {/* <Route path="/spots/:spotId" component={SpotShowContainer} /> */}
             {/* <Route exact path="/" component={SearchContainer} /> */}
         </Switch>
         

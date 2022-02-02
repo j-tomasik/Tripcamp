@@ -1,0 +1,207 @@
+// Place all the styles related to the api/spots controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.parent {
+    background: #f3f2ef;
+    padding-bottom: 40px;
+}
+
+.index-image {
+    height: 550px;
+    width: 550px;
+    object-fit: cover;
+    display: block;
+    z-index: 2;
+    padding: 15px;
+}
+
+.photos {
+    margin-left: 35vh;
+    padding-top: 50px;
+}
+
+
+
+.spot-show-body {
+    margin: 15px;
+    width: 66.66666667%;
+}
+
+.spot-show .make-room {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+    max-width: 18080px;
+
+}
+
+.booking-form {
+    width: 320px;
+    border: 2px solid lightgray;
+    top: 75px;
+    float: right;
+    position: sticky;
+    background-color: #fff;
+    margin-top: -150px;
+    margin-right: -100px;
+    display: block;
+    right: 0;
+    padding: 15px;
+}
+
+.booking-form .price-per-night {
+    padding: 16px 10px;
+}
+
+.booking-form .form-fields {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+}
+
+.booking-form .form-fields > div {
+    padding: 13px 10px;
+    letter-spacing: 0.3px;
+}
+
+.form-fields .checkin, .form-fields .checkout {
+    width: 36%;
+    cursor: pointer;
+    border-right: 1px solid lightgray;
+}
+
+.btn-container button{
+    width: 100%;
+    background-color: #41D9AC;
+    height: 3.4rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    
+}
+
+.spot-show .spot-show-body {
+    width: 66.66666667%;
+}
+
+.spot-show .name {
+    font-size: 36px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.spot-show .rating {
+    font-weight: 500;
+    border-bottom: 3px solid lightgray;
+    padding: 9px 7px 22px 7px;
+}
+
+.host-description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.description {
+    color: #757575;
+    line-height: 1.75;
+    width: 65%;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.spot-show .features {
+    display: flex;
+    margin-top: 10px;
+}
+
+.spot-show .spacing {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    width: 33.3333%;
+    min-width: 220px;
+}
+
+.area, .essential, .amenity {
+    padding: 15px;
+    border: 3px solid lightgray;
+    height: 340px;
+}
+
+.spot-show .details {
+    border-top: 3px solid lightgray;
+    border-bottom: 3px solid lightgray;
+    padding: 30px 0px;
+    display: flex;
+    // justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.spot-show .details .heading {
+    width: 17%;
+    min-width: 61px;
+    vertical-align: bottom;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.spot-show .activities {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid lightgray;
+}
+
+div ul li {
+    padding-right: 5px;
+    padding-top: 10px;
+}
+
+div ul {
+    list-style: none;
+    padding-top: 5px;
+}
+
+.details {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Calibre",
+    Helvetica,
+    Arial,
+    sans-serif;
+    ;
+
+    ul li{
+        padding-bottom: 10px;
+        padding-right: 5px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    b {
+        font-weight: 600;
+    }
+
+}
+
+.activities ul {
+    margin-bottom: 25px;
+}
+
+.activities li {
+    margin-top: 5px;
+}
+
+
+
+
+
