@@ -24,11 +24,11 @@ class ReviewForm extends React.Component {
         this.props.history.replace(`/spots/${this.props.spotId}`)
     }
 
-    handleClick = (e) => {
-        e.preventDefault();
-        $(".selected-option").removeClass("selected-option");
-        $(e.currentTarget).addClass("selected-option");
-    };
+    // handleClick = (e) => {
+    //     e.preventDefault();
+    //     $(".selected-option").removeClass("selected-option");
+    //     $(e.currentTarget).addClass("selected-option");
+    // };
 
     onChange = (e) => {
         this.setState({
