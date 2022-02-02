@@ -8,8 +8,8 @@ validates :password, length: { minimum: 6 }, allow_nil: true
 after_initialize :ensure_session_token
 
 has_many :reviews,
-    foreign_key: :author_id
-    class_name: Review
+    foreign_key: :author_id,
+    class_name: :Review
 
 
 has_many :bookings,
