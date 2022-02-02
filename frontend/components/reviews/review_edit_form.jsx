@@ -7,7 +7,8 @@ class ReviewEditForm extends React.Component {
             recommend: this.props.review.recommend,
             body: this.props.review.body,
             spot_id: this.props.spotId,
-            author_id: this.props.authorId
+            author_id: this.props.authorId,
+            id: this.props.review.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         console.log(this.props)

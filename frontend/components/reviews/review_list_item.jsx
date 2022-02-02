@@ -22,7 +22,7 @@ class ReviewListItem extends React.Component {
 
         const { body } = review;
 
-        const rec = this.props.review.recommend ? <div>They recommend this spot</div> : <div>They do not recommend this spot</div>
+        const rec = this.props.review.recommend ? <div>I recommend this spot</div> : <div>I do not recommend this spot</div>
             
         
         const delete_button = (this.props.session === this.props.review.authorId ? <button onClick={this.handleDelete} className="review-delete-button">Delete Review</button> : null)
