@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewList from '../reviews/review_list';
+import BookingForm from './booking_form_container'
 import ReviewForm from './review_form'
+
 
 
 
@@ -42,8 +44,8 @@ class SpotShow extends React.Component {
                     </div>
 
                 <div className='make-room'>
-
-                    <div className='booking-form'>
+                    <BookingForm spot={spot} session={this.props.state.session}/>
+                    {/* <div className='booking-form'>
                         
                         <div className='price-per-night'>
                             <div className='price'>$150</div>
@@ -80,7 +82,7 @@ class SpotShow extends React.Component {
                         </div>
 
 
-                    </div>
+                    </div> */}
 
 
                     <div className='spot-show-body'>
