@@ -11,7 +11,9 @@ class ReviewEditForm extends React.Component {
             id: this.props.review.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        console.log(this.props)
+        // console.log(this.props)
+        // this.setRadio = this.setRadio.bind(this)
+        this.onChange = this.onChange.bind(this);
     }
 
     handleSubmit(e) {
@@ -23,19 +25,44 @@ class ReviewEditForm extends React.Component {
 
     onChange = (e) => {
         this.setState({
-            recommend: e.target.value
+            recommend: e.currentTarget.value
+
         })
     }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
+    
 
     componentDidMount() {
         window.scrollTo(0, 0);
     }
 
+
+    
+    
+    // setRadio() {
+    //     if (this.props.review.recommend === true) {
+    //         document.getElementById('true-input').setAttribute('checked', 'true')
+    //     } else {
+    //         document.getElementById('false-input').setAttribute('checked', 'true')
+    //     }
+    // }
+    
+    
+
     render() {
+        if (!this.props.review) {
+            return null
+        }
+        console.log('state rec', this.state.recommend)
+        console.log('prop rec', this.props.review.recommend)
+        // this.setRadio();
+
+        // const checkedTrue = this.props.review.recommend === true ? true : false;
+        // const checkedFalse = this.props.review.recommend === false ? true : false;
+        // this.setRadio();
         return (
             <div className="review-form-container">
                 <form onSubmit={this.handleSubmit} className="review-form">Review
@@ -48,11 +75,11 @@ class ReviewEditForm extends React.Component {
 
                                 <input
                                     type="radio"
-                                    value={true}
+                                    value= {true}
                                     name="recommend"
-
-                                    className="review-button selected-option"
-
+                                    // checked={this.state.recommend}
+                                    className="review-button"
+                                        id="true-input"
                                     onChange={this.onChange}
                                 />
 
@@ -65,7 +92,8 @@ class ReviewEditForm extends React.Component {
                                     value={false}
                                     name="recommend"
                                     className="review-button"
-
+                                    id="false-input"
+                                    // checked={this.state.recommend}
                                     onChange={this.onChange}
                                 />
 
