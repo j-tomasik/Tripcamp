@@ -15,7 +15,8 @@ class SpotShow extends React.Component {
     componentDidMount() {
         this.props.fetchSpot(this.props.match.params.spotId).then(            
             this.props.fetchAllReviews(this.props.match.params.spotId)
-        )
+        );
+        window.scrollTo(0, 0);
     }
 
     handleReviewClick(e) {
@@ -45,44 +46,7 @@ class SpotShow extends React.Component {
 
                 <div className='make-room'>
                     <BookingForm spot={spot} session={this.props.state.session}/>
-                    {/* <div className='booking-form'>
-                        
-                        <div className='price-per-night'>
-                            <div className='price'>$150</div>
-                            <div className='per-night'>per night</div>
-                        </div>
-
-                        <div className='form-field'>
-                            <div className='checkin'>
-                                <div className='label'>Check in</div>
-                                <div className='DayPickerInput'>
-                                    <input placeholder='Select date' />
-                                </div>
-                            </div>
-
-
-                            <div className='checkout'>
-                                <div className='label'>Check out</div>
-                                <div className='DayPickerInput'>
-                                    <input placeholder='Select date' />
-                                </div>
-                            </div>
-
-
-                            <div className='guests'>
-                                <div className='label'>Guests</div>
-                                <div className='book-guests'>
-                                </div>
-                            </div>
-
-                        </div>
-                        
-                        <div className='btn-container'>
-                            <button>Instant Book</button>
-                        </div>
-
-
-                    </div> */}
+                    
 
 
                     <div className='spot-show-body'>

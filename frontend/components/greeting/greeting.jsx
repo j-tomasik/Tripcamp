@@ -22,7 +22,8 @@ class Greeting extends React.Component {
         );
         const personalGreeting = () => (
             <hgroup className="header-group">
-                <Link to={`/users/${currentUser.id}/bookings`} className='triplink'><span className="trips">Trips</span></Link>
+                
+                <Link to={`/users/${currentUser.id}/bookings`} className='triplink'><b>Trips</b></Link>
                 <h2 className="header-name">Hi, {currentUser.firstname}!</h2>
                 <button className="logout-submit" onClick={logout}>Log Out</button>
             </hgroup>

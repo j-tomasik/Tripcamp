@@ -21,6 +21,7 @@ class BookingListItem extends React.Component {
     dateFormat(date) {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const months = ['Placeholder', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        console.log('date', date)
         const splitted = date.split("-")
 
         const date_num = parseInt(splitted[2].slice(0, 2));
@@ -40,10 +41,10 @@ class BookingListItem extends React.Component {
 
     render() {
         const spot = this.props.trip.spot;
-        // console.log('trip in list item',this.props.trip)
+        console.log('trip in list item',this.props.trip)
         return(
             <div>
-                <div className='spot-index-item'>
+                <div className='booking-index-item'>
                     <img src={this.props.photo}/>
                         <div className='spot-info'>
 
@@ -53,8 +54,8 @@ class BookingListItem extends React.Component {
                             </div>
 
                             <div className='booking-detail'>
-                                <span className='guests'>{this.props.trip.guests}guests</span>
-                            {/* <span className='dates'>{this.dateFormat(this.props.trip.start_date)} - {this.dateFormat(this.props.trip.end_date)}</span> */}
+                                <span className='guests'>{this.props.trip.guests} guest(s)</span>
+                            {/* <span className='dates'>{this.dateFormat(this.props.trip.startDate)} - {this.dateFormat(this.props.trip.Date)}</span> */}
                                 <button onClick={this.handeDelete}>Delete</button>
                             </div>
 

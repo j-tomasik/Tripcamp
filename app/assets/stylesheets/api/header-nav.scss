@@ -26,6 +26,7 @@ $button: #41D9AC;
     width: 50%;
     white-space: nowrap;
     margin-right: 20px;
+    margin-left: 20px;
 }
 
 .header-group {
@@ -34,6 +35,10 @@ $button: #41D9AC;
     justify-content: center;
     align-items: center;
 
+}
+
+.header-group > a {
+    color: black
 }
 
 

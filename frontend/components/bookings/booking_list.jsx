@@ -15,28 +15,33 @@ class BookingList extends React.Component {
         }
     }
     componentDidMount() {
-        this.props.fetchBookings(this.props.user.id)
+        this.props.fetchBookings(this.props.user.id);
+        window.scrollTo(0, 0);
     }
 
     render() {
-        //push to login page?
+
         if (!(this.props.session === this.props.user.id)) {
             this.props.history.push('/');
         }
-        // console.log('props in booking list',this.props)
+
         const trips = this.props.bookings.map(trip => <BookingListItem key={trip.id} photo={trip.spotPhoto} spot={trip.spot} trip={trip} delete={this.props.deleteBooking} history={this.props.history} fetchSpot={this.props.fetchSpot} />)
     
         return(
             <div className='booking'>
                 <div className='bio'>
                     <div className='user'>
-                        <h2>{this.props.user.firstname} {this.props.user.lastname}</h2>
-                        <span>Your current spots reservations are to the right, enjoy your Trips!</span>
+                        <h2>Hello {this.props.user.firstname} {this.props.user.lastname}</h2>                                                                                       
+                        
+                    </div>
+
+                    <div>
+                        <span>Your current trip reservations are to the right, enjoy your Trips!</span>
                     </div>
                 </div>
 
                 <div className='trips'>
-                        <span className='num-trips'>{this.props.bookings.length}</span>
+                        <span className='num-trips'>{this.props.bookings.length} Trip(s) currently planned</span>
                         {trips}
                 </div>
 
