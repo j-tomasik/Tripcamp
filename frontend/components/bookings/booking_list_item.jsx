@@ -38,7 +38,7 @@ class BookingListItem extends React.Component {
 
     render() {
         const spot = this.props.trip.spot;
-
+        console.log(this.props.trip)
         return(
             <div>
                 <div className='spot-index-item'>
@@ -52,7 +52,7 @@ class BookingListItem extends React.Component {
 
                             <div className='booking-detail'>
                                 <span className='guests'>{this.props.trip.guests}guests</span>
-                            <span className='dates'>{this.dateFormat(this.props.trip.start_date)} - {this.dateFormat(this.props.trip.end_date)}</span>
+                            {/* <span className='dates'>{this.dateFormat(this.props.trip.start_date)} - {this.dateFormat(this.props.trip.end_date)}</span> */}
                                 <button onClick={this.handeDelete}>Delete</button>
                             </div>
 

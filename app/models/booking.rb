@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
     validates :start_date, :end_date, :user_id, :spot_id, presence: true
 
-    blongs_to :user,
+    belongs_to :user,
         foreign_key: :user_id,
         class_name: :User
 

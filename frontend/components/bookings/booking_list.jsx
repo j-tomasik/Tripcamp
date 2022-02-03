@@ -20,7 +20,8 @@ class BookingList extends React.Component {
         if (!(this.props.session === this.props.user.id)) {
             this.props.history.push('/');
         }
-        const trips = this.props.user.bookings.map(trip => <BookingListItem key={trip.id} delete={this.props.deleteBooking} history={this.props.history} fetchSpot={this.props.fetchSpot} />)
+        console.log('props in booking list',this.props)
+        const trips = this.props.bookings.map(trip => <BookingListItem key={trip.id} trip={trip} delete={this.props.deleteBooking} history={this.props.history} fetchSpot={this.props.fetchSpot} />)
     
         return(
             <div className='booking'>
@@ -32,7 +33,7 @@ class BookingList extends React.Component {
                 </div>
 
                 <div className='trips'>
-                        <span className='num-trips'>{this.props.user.bookings.length}</span>
+                        <span className='num-trips'>{this.props.bookings.length}</span>
                         {trips}
                 </div>
 
