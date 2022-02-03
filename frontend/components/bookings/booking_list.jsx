@@ -23,7 +23,7 @@ class BookingList extends React.Component {
         if (!(this.props.session === this.props.user.id)) {
             this.props.history.push('/');
         }
-        console.log('props in booking list',this.props)
+        // console.log('props in booking list',this.props)
         const trips = this.props.bookings.map(trip => <BookingListItem key={trip.id} photo={trip.spotPhoto} spot={trip.spot} trip={trip} delete={this.props.deleteBooking} history={this.props.history} fetchSpot={this.props.fetchSpot} />)
     
         return(

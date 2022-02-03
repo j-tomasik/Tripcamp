@@ -12,8 +12,10 @@ class BookingListItem extends React.Component {
 
     handeDelete(e) {
         e.preventDefault();
+        console.log('from delete', this.props)
+
         this.props.delete(this.props.trip.id);
-        // location.reload();
+        location.reload();
     }
 
     dateFormat(date) {
@@ -38,7 +40,7 @@ class BookingListItem extends React.Component {
 
     render() {
         const spot = this.props.trip.spot;
-        console.log('trip in list item',this.props.trip)
+        // console.log('trip in list item',this.props.trip)
         return(
             <div>
                 <div className='spot-index-item'>
