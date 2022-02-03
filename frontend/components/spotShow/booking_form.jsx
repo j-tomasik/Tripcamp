@@ -9,7 +9,7 @@ class BookingForm extends React.Component {
             start_date: '',
             end_date: '',
             guests: '1',
-            spot: this.props.spot
+            // spot: this.props.spot
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -24,7 +24,7 @@ class BookingForm extends React.Component {
             this.props.createBooking(booking)
                 .then(() => {
                     this.props.history.push(`/users/${this.props.session}/bookings`);
-                    location.reload()
+                    // location.reload()
                 })
         } else {
             this.props.history.push('/login')

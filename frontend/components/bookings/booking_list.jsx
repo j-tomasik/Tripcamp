@@ -4,7 +4,7 @@ import BookingListItem from './booking_list_item';
 class BookingList extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { showing: 'Trips' }
+        // this.state = { showing: 'Trips' }
         this.handleReviewClick = this.handleReviewClick.bind(this);
     }
 
@@ -14,6 +14,9 @@ class BookingList extends React.Component {
             this.props.history.push(`/spots/${id}`)
         }
     }
+    componentDidMount() {
+        this.props.fetchBookings(this.props.user.id)
+    }
 
     render() {
         //push to login page?
@@ -21,7 +24,7 @@ class BookingList extends React.Component {
             this.props.history.push('/');
         }
         console.log('props in booking list',this.props)
-        const trips = this.props.bookings.map(trip => <BookingListItem key={trip.id} trip={trip} delete={this.props.deleteBooking} history={this.props.history} fetchSpot={this.props.fetchSpot} />)
+        const trips = this.props.bookings.map(trip => <BookingListItem key={trip.id} photo={trip.spotPhoto} spot={trip.spot} trip={trip} delete={this.props.deleteBooking} history={this.props.history} fetchSpot={this.props.fetchSpot} />)
     
         return(
             <div className='booking'>

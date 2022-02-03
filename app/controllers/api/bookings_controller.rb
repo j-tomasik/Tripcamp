@@ -11,7 +11,6 @@ class Api::BookingsController < ApplicationController
 
     def create
         @booking = current_user.bookings.new(booking_params)
-
         if @booking.save
             render :show
         else

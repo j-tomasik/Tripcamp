@@ -6,14 +6,14 @@ class BookingListItem extends React.Component {
 
         this.handeDelete = this.handeDelete.bind(this);
         this.dateFormat = this.dateFormat.bind(this);
-        this.handleClick = this.handleClick.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
     }
 
 
     handeDelete(e) {
         e.preventDefault();
         this.props.delete(this.props.trip.id);
-        location.reload();
+        // location.reload();
     }
 
     dateFormat(date) {
@@ -30,19 +30,19 @@ class BookingListItem extends React.Component {
     }
 
 
-    handleClick(e) {
-        e.preventDefault();
-        this.props.history.push(`/spots/${this.props.trip.spotId}`);
-        window.scrollTo(0, 0);
-    }
+    // handleClick(e) {
+    //     e.preventDefault();
+    //     this.props.history.push(`/spots/${this.props.trip.spotId}`);
+    //     window.scrollTo(0, 0);
+    // }
 
     render() {
         const spot = this.props.trip.spot;
-        console.log(this.props.trip)
+        console.log('trip in list item',this.props.trip)
         return(
             <div>
                 <div className='spot-index-item'>
-                    <img src={spot.photoUrl}/>
+                    <img src={this.props.photo}/>
                         <div className='spot-info'>
 
                             <span className='spot-title'>{spot.name}</span>

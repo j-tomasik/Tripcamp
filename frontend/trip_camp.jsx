@@ -6,6 +6,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import { fetchSpot } from './actions/spot_actions'
 import { createReview} from './actions/review_actions'
+import { createBooking } from './actions/booking_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -22,8 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
-    window.createReview = createReview
-    window.fetchSpot = fetchSpot
+    window.createBooking = createBooking;
+    window.createReview = createReview;
+    window.fetchSpot = fetchSpot;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
 
