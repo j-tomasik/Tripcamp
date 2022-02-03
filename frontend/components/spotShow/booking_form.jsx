@@ -8,7 +8,7 @@ class BookingForm extends React.Component {
         this.state = {
             start_date: '',
             end_date: '',
-            guests: 1,
+            guests: '1',
             spot: this.props.spot
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,9 +16,9 @@ class BookingForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-
+        const guestNum = parseInt(this.state.guests)
         const spotId = parseInt(this.props.match.params.spotId);
-        const booking = Object. assign({}, this.state, {spot_id: spotId});
+        const booking = Object.assign({}, this.state, {spot_id: spotId}, {guests: guestNum});
 
         if (this.props.session) {
             this.props.createBooking(booking)
