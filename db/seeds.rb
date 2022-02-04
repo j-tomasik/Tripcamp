@@ -8,7 +8,7 @@ Spot.destroy_all
 Review.destroy_all
 
 
-demoUser = User.create({firstname: 'demo-user', lastname:'user-demo', zip: 94707, email: 'demo@starting.com', password: 'demo-user'})
+demoUser = User.create({firstname: 'demo', lastname:'user', zip: 94707, email: 'demo@starting.com', password: 'demo-user'})
 user01 = User.create({firstname: 'Presley', lastname: 'Reed', zip: 94707, email:'presley@reed.com', password: 'group1'})
 
 spot01 = Spot.create({name: 'Piodao, Portugal', description: 'Located in the Serra de Estrela region of Portugal, which is the highest location in the country', lat: 40.22978, lng: 7.82472})

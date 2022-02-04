@@ -36,39 +36,109 @@
 }
 
 .booking-form {
-    width: 320px;
+    width: 220px;
     border: 2px solid lightgray;
     top: 75px;
     float: right;
     position: sticky;
     background-color: #fff;
-    margin-top: -150px;
+    margin-top: -230px;
     margin-right: -100px;
-    display: block;
+    // display: block;
     right: 0;
     padding: 15px;
+    border-radius: 3px;
+
+    > div {
+        height: 70px;
+        border-bottom: 2px solid #ebebeb;
+        width: 100%;
+        display: flex;
+    
+    }
+
+    .text {
+        margin: 10px;
+    }
+
+    .in {
+        border-right: 2px solid #ebebeb;
+    }
+
+    .in:hover, .out:hover, .guests:hover {
+        background: #FDFDFD
+    }
+
+    .sub {
+        button {
+            margin: 10px;
+            background: #40d9ac;
+            width: 100%;
+            border: none;
+            color: #fff;
+            font-size: 19px;
+            font-weight: 500;
+        }
+
+        button:hover {
+            border: 3px solid #40d9ac;
+            background: #FFF;
+            color: #40d9ac;
+            cursor: pointer;
+        }
+    }
+
+    .dates {
+
+        .out, .in {
+            width: 50%;
+        }
+
+        input {
+            border: none;
+            width: 95%;
+        }
+    }
+
+    .guests {
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        select {
+            border: none
+        }
+    }
+
+    label {
+        font-size: 16px;
+        color: #333333; 
+        margin-bottom: 5px; 
+    }
+
+    .price {
+        
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        span {
+            font-size: 24px;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+
+        small {
+            font-size: 14px;
+            color: #757575
+        }
+    }
 }
 
-.booking-form .price-per-night {
-    padding: 16px 10px;
-}
 
-.booking-form .form-fields {
-    display: flex;
-    border-bottom: 1px solid lightgray;
-    border-top: 1px solid lightgray;
-}
 
-.booking-form .form-fields > div {
-    padding: 13px 10px;
-    letter-spacing: 0.3px;
-}
-
-.form-fields .checkin, .form-fields .checkout {
-    width: 36%;
-    cursor: pointer;
-    border-right: 1px solid lightgray;
-}
 
 .btn-container button{
     width: 100%;

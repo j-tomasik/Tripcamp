@@ -12,6 +12,7 @@ class NavBar extends React.Component {
             <nav className="nav-bar-splash">
                 <div className='left-nav'>
                     <Link to="/" className="header-link" replace>
+                        <img className='header-img' src={window.logo}></img>
                         <h1>Welcome to Trip Camp!</h1>
                     </Link>
                 </div>

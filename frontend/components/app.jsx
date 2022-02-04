@@ -16,6 +16,7 @@ import SpotShowContainer from './spotShow/spot_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ReviewFormContainer from './session_form/spots/review_form_container';
 import ReviewEditFormContainer from './reviews/review_edit_form_container';
+import BookingListContainer from './bookings/booking_list_container'
 
 const App = () => (
     <div className='parent'>
@@ -30,6 +31,7 @@ const App = () => (
             <Route exact path='/' component={SpotIndexContainer} />
             <ProtectedRoute exact path='/spots/:spotId/reviews' component={ReviewFormContainer} />
             <ProtectedRoute exact path='/spots/:spotId/reviews/:id' component={ReviewEditFormContainer} />
+            <ProtectedRoute exact path='/users/:userId/bookings' component={BookingListContainer} />
             {/* <ProtectedRoute exact path="/spots/new" component={SpotFormContainer} /> */}
             {/* <Route exact path="/" component={SearchContainer} /> */}
         </Switch>
