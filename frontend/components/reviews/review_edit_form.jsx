@@ -11,7 +11,7 @@ class ReviewEditForm extends React.Component {
             id: this.props.review.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        // console.log(this.props)
+        
         // this.setRadio = this.setRadio.bind(this)
         this.onChange = this.onChange.bind(this);
     }
@@ -56,8 +56,7 @@ class ReviewEditForm extends React.Component {
         if (!this.props.review) {
             return null
         }
-        console.log('state rec', this.state.recommend)
-        console.log('prop rec', this.props.review.recommend)
+        
         // this.setRadio();
 
         // const checkedTrue = this.props.review.recommend === true ? true : false;

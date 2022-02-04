@@ -6,7 +6,6 @@ export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 
 const receiveReview = (review) => {
-    // debugger
     return{
         type: RECEIVE_REVIEW,
         review

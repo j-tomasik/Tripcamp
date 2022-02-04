@@ -6,7 +6,6 @@ export const RECEIVE_BOOKINGS = "RECEIVE_BOOKINGS";
 
 
 const receiveBooking = ({booking}) => {
-    debugger
     return{type: RECEIVE_BOOKING,
     booking}
 };
@@ -27,7 +26,7 @@ export const fetchBookings = userId => dispatch => {
 }
 
 export const createBooking = booking => dispatch => {
-    return APIUtil.createBooking(booking).then((booking) => dispatch(receiveBooking(booking)),() => console.log('fail'));
+    return APIUtil.createBooking(booking).then((booking) => dispatch(receiveBooking(booking)));
 }
 
 export const deleteBooking = bookingId => dispatch => {

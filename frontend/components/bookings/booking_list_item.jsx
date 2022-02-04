@@ -12,7 +12,7 @@ class BookingListItem extends React.Component {
 
     handeDelete(e) {
         e.preventDefault();
-        console.log('from delete', this.props)
+
 
         this.props.delete(this.props.trip.id);
         location.reload();
@@ -21,7 +21,7 @@ class BookingListItem extends React.Component {
     dateFormat(date) {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const months = ['Placeholder', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        console.log('date', date)
+        
         const splitted = date.split("-")
 
         const date_num = parseInt(splitted[2].slice(0, 2));
@@ -41,7 +41,7 @@ class BookingListItem extends React.Component {
 
     render() {
         const spot = this.props.trip.spot;
-        console.log('trip in list item',this.props.trip)
+        
         return(
             <div>
                 <div className='booking-index-item'>
