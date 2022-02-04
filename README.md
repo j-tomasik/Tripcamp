@@ -35,7 +35,7 @@ Users who make accounts can book spots and write reviews.
 
 * Leave Reviews: Users with accounts can create, edit and delete reviews for spots and tell others about their trips
 
-![review](./app/assets/images/review.png)
+<!-- ![review](./app/assets/images/review.png) -->
 
 
 * Manage Bookings: Users are able to access and view their booked trips.
