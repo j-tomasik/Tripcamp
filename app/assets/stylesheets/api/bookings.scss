@@ -15,6 +15,7 @@
         // border: 1px solid rgb(229, 234, 223);
         border-radius: 2px;
         height: 375px;
+        margin-top: 15px;
 
         .user {
             display: flex;
@@ -35,6 +36,7 @@
             Helvetica,
             sans-serif;
             font-size: 20px;
+            padding-left: 25px;
         }
     }
 }
@@ -74,7 +76,7 @@
 
         .spot-price {
             font-size: 22px;
-            color: #1b1b1b;
+            color: #333333;
             letter-spacing: 0.22px;
             font-family: 'Calibre',
                 Arial,
@@ -101,6 +103,7 @@
             flex-direction: column;
 
             span {
+                color: #333333;
                 margin-top: 10px;
                 font-family: 'Calibre',
                 Arial,

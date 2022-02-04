@@ -12,6 +12,7 @@ $button: #41D9AC;
     top: 0px;
     z-index: 2;
     background: #f3f2ef;
+    color: #28400C;
 }
 
 .header-link {
@@ -19,7 +20,7 @@ $button: #41D9AC;
     padding: 10px;
     margin: 10px;
     line-height: 1.6;
-    color: #131212;
+    color: #28400C;
 }
 
 .header-name {
@@ -38,7 +39,7 @@ $button: #41D9AC;
 }
 
 .header-group > a {
-    color: black
+    color: #28400C;
 }
 
 
@@ -58,7 +59,9 @@ $button: #41D9AC;
 
 .login-signup {
     margin-top: 7.5px;
+    color: #28400C;
 }
+
 
 .logout-submit {
     width: 50%;
@@ -70,4 +73,10 @@ $button: #41D9AC;
     border-radius: 5px;
     font-size: 1rem;
     color: white;
+}
+
+.header-img {
+    max-height: 40px;
+    max-width: 40px;
+    padding-right: 5px;
 }

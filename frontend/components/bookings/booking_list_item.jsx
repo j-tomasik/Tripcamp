@@ -55,7 +55,7 @@ class BookingListItem extends React.Component {
 
                             <div className='booking-detail'>
                                 <span className='guests'>{this.props.trip.guests} guest(s)</span>
-                            {/* <span className='dates'>{this.dateFormat(this.props.trip.startDate)} - {this.dateFormat(this.props.trip.Date)}</span> */}
+                            <span className='dates'>{this.dateFormat(this.props.trip.startDate)} - {this.dateFormat(this.props.trip.endDate)}</span>
                                 <button onClick={this.handeDelete}>Delete</button>
                             </div>
 
