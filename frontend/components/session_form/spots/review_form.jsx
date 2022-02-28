@@ -10,7 +10,8 @@ class ReviewForm extends React.Component {
             recommend: true,
                 body: '',
                 spot_id: this.props.spotId,
-                author_id: this.props.authorId
+                author_id: this.props.authorId,
+                errors: [],
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         
@@ -22,6 +23,21 @@ class ReviewForm extends React.Component {
         const review = Object.assign({}, this.state);
         this.props.createReview(review);
         this.props.history.replace(`/spots/${this.props.spotId}`)
+    }
+
+    renderErrors() {
+        return (
+            <ul id="errors">
+                {this.state.errors.length > 0 ?                    
+                        this.state.errors.map((error, i) => (
+                            <li key={`error-${i}`}>
+                                {error}
+                            </li>
+                        ))
+                    
+                    : <p></p>}               
+            </ul>
+        );
     }
 
     // handleClick = (e) => {
@@ -84,7 +100,7 @@ class ReviewForm extends React.Component {
                 <button className="submit-review" type='submit'>Leave Review</button>
                 <button className="review-exit">Close</button>
                 </form>
-
+                {this.renderErrors()}
             </div>
         )
     }
