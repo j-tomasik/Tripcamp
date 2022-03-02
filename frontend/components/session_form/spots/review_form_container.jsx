@@ -5,7 +5,8 @@ import ReviewForm from './review_form';
 
 const mSTP = (state, ownProps) => ({
     spotId: ownProps.match.params.spotId,
-    authorId: state.session.id
+    authorId: state.session.id,
+    errors: state.errors.review,
 })
 
 
