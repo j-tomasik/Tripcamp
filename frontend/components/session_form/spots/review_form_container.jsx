@@ -7,6 +7,7 @@ const mSTP = (state, ownProps) => ({
     spotId: ownProps.match.params.spotId,
     authorId: state.session.id,
     errors: state.errors.review,
+    
 })
 
 
