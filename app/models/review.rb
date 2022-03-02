@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
     validates :recommend, inclusion: { in: [true, false] }
-    validates :body, :title presence: true
+    validates :body, :title, presence: true
 
     belongs_to :spot,
         foreign_key: :spot_id,
