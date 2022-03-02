@@ -32,10 +32,9 @@ export const receiveReviewErrors = errors => ({
 
 export const createReview = (review) => dispatch => {
 
-    return APIUtil.createReview(review).then((review) => 
-    dispatch(receiveReview(review))), err => (
-        dispatch(receiveReviewErrors(err.responseJSON))
-    )
+    return APIUtil.createReview(review)
+    .then((review) => dispatch(receiveReview(review)))
+    .fail((res) => dispatch(receiveReviewErrors(res.responseJSON)));
 }
 
 export const fetchAllReviews = (spotId) => dispatch => {
