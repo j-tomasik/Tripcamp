@@ -8,7 +8,8 @@ class ReviewEditForm extends React.Component {
             body: this.props.review.body,
             spot_id: this.props.spotId,
             author_id: this.props.authorId,
-            id: this.props.review.id
+            id: this.props.review.id,
+            errors: [],
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         
@@ -19,8 +20,9 @@ class ReviewEditForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const review = Object.assign({}, this.state);
-        this.props.updateReview(review);
-        this.props.history.replace(`/spots/${this.props.spotId}`)
+        this.props.updateReview(review).then(
+        () => this.props.history.replace(`/spots/${this.props.spotId}`),
+        ).fail(() => this.setState({errors: this.props.errors}))
     }
 
     onChange = (e) => {
@@ -32,6 +34,21 @@ class ReviewEditForm extends React.Component {
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
+    }
+
+    renderErrors() {
+        return (
+            <ul id="errors">
+                {this.state.errors.length > 0 ?                    
+                        this.state.errors.map((error, i) => (
+                            <li key={`error-${i}`}>
+                                {error}
+                            </li>
+                        ))
+                    
+                    : <p></p>}               
+            </ul>
+        );
     }
     
 
@@ -102,6 +119,7 @@ class ReviewEditForm extends React.Component {
                     </label>
                     <button className="submit-review" type='submit'>Leave Review</button>
                     <button className="review-exit">Close</button>
+                    {this.renderErrors()}
                 </form>
 
             </div>

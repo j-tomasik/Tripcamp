@@ -8,7 +8,8 @@ const mSTP = (state, ownProps) => {
     return{
     spotId: ownProps.match.params.spotId,
     authorId: state.session.id,
-    review: state.entities.reviews[ownProps.match.params.id]
+    review: state.entities.reviews[ownProps.match.params.id],
+    errors: state.errors.review,
     }
 }
 

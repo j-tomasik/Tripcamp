@@ -21,8 +21,15 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const review = Object.assign({}, this.state);
-        this.props.createReview(review);
-        this.props.history.replace(`/spots/${this.props.spotId}`)
+        this.props.createReview(review).then(
+            () => this.props.history.replace(`/spots/${this.props.spotId}`),
+            
+        ).fail(() => this.setState({errors: this.props.errors}))
+
+            // if(this.state.errors.length === 0) {
+            //     this.props.history.replace(`/spots/${this.props.spotId}`)
+            // }
+            
     }
 
     renderErrors() {
@@ -98,9 +105,12 @@ class ReviewForm extends React.Component {
                         </div>
                     </label>
                 <button className="submit-review" type='submit'>Leave Review</button>
-                <button className="review-exit">Close</button>
+                <button className="review-exit" 
+                onClick={() => this.props.history.replace(`/spots/${this.props.spotId}`)}>
+                    Close</button>
+                    {this.renderErrors()}
                 </form>
-                {this.renderErrors()}
+                
             </div>
         )
     }
