@@ -9,9 +9,11 @@ class BookingForm extends React.Component {
             start_date: '',
             end_date: '',
             guests: '1',
+            today: '',
             // spot: this.props.spot
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.setCalendar = this.setCalendar.bind(this);
     }
 
     handleSubmit(e) {
@@ -35,6 +37,15 @@ class BookingForm extends React.Component {
         return e => this.setState({[field]: e.currentTarget.value});
     }
 
+    setCalendar() {
+        let todayDate = new Date().toISOString().slice(0,10)
+        this.setState({today: todayDate})
+    }
+
+    componentDidMount() {
+        this.setCalendar()
+    }
+
     render() {
         return(
             <form className='booking-form' onSubmit={this.handleSubmit}>
@@ -48,14 +59,14 @@ class BookingForm extends React.Component {
                     <div className='in'>
                         <div className='text'>
                             <label>Check in</label>
-                            <input type='date' placeholder='Select date' onChange={this.update('start_date')}/>
+                            <input type='date' placeholder='Select date' min={this.state.today} onChange={this.update('start_date')}/>
                         </div>
                     </div>
 
                     <div className='out'>
                         <div className='text'>
                             <label>Check out </label>
-                            <input type='date' placeholder='Select date' onChange={this.update('end_date')} />
+                            <input type='date' placeholder='Select date' min={this.state.start_date} onChange={this.update('end_date')} />
                         </div>
                     </div>
 
